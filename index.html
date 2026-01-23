@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <!--
 ===============================================================================
-📝 커밋/푸시 안내
+📝 index2.html - Light Theme Version (아이콘 스타일에 맞춘 버전)
 ===============================================================================
-이 파일은 WEB 저장소 (Public)와 App 저장소 (Private) 양쪽에 존재합니다.
+아이콘이 밝은 배경(오프화이트)에 어두운 라인 아트 스타일이므로,
+이 페이지도 같은 톤으로 맞춤.
 
-🔹 WEB 저장소: https://github.com/proxima-e/-When-Did-I-WEB
-🔹 App 저장소: https://github.com/proxima-e/-WhenDidI- (서브모듈로 연결)
-
-📌 변경사항 푸시 방법:
-   Claude에게 "WEB 변경사항 커밋/푸시해줘" 라고 요청하면
-   양쪽 저장소에 자동으로 반영됩니다.
-
-📌 GitHub Pages 배포:
-   https://proxima-e.github.io/-When-Did-I-WEB/
+style.css (기존 다크 테마) 대신 style2.css (라이트 테마)를 사용.
 ===============================================================================
 -->
 <html lang="ko">
@@ -38,15 +31,16 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/icon.png">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Styles (Light Theme) -->
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
     <div class="container">
         <section class="hero" style="min-height: 100vh;">
             <div class="logo" style="flex-direction: column; gap: 20px; margin-bottom: 40px;">
-                <img src="./assets/icon.png" alt="언제더라 로고" style="width: 120px; height: 120px; border-radius: 20px;">
+                <img src="./assets/icon.png" alt="언제더라 로고"
+                    style="width: 120px; height: 120px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
                 <span style="font-size: 3rem;">언제더라</span>
             </div>
             <div class="release-notice">

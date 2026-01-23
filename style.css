@@ -1,11 +1,17 @@
+/* 
+ * style2.css - Light Theme (Matching Icon Design)
+ * The icon has a light/off-white background with dark line-art,
+ * so this theme uses a similar aesthetic for cohesion.
+ */
+
 :root {
-    --primary-color: #ffffff;
-    --secondary-color: #888888;
-    --background-color: #000000;
-    --text-color: #ffffff;
-    --text-secondary: #a0a0a0;
-    --card-bg: rgba(255, 255, 255, 0.08);
-    --border-color: rgba(255, 255, 255, 0.15);
+    --primary-color: #1a1a1a;
+    --secondary-color: #555555;
+    --background-color: #f5f5f3;
+    --text-color: #1a1a1a;
+    --text-secondary: #666666;
+    --card-bg: rgba(0, 0, 0, 0.03);
+    --border-color: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -38,6 +44,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    background: rgba(245, 245, 243, 0.9);
 }
 
 .logo {
@@ -52,7 +59,7 @@ header {
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    /* Slightly rounded square */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Hero Section */
@@ -64,16 +71,14 @@ header {
     align-items: center;
     text-align: center;
     padding: 60px 0;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 70%);
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 24px;
-    background: linear-gradient(to right, #fff, #a0a0b0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-color);
     line-height: 1.2;
+    font-weight: 700;
 }
 
 .hero p {
@@ -87,49 +92,45 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: #ffffff;
-    color: #000000;
+    background: var(--text-color);
+    color: var(--background-color);
     padding: 16px 32px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
     transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-download:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
-    background-color: #f0f0f0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    background-color: #333333;
 }
 
 /* Release Notice */
 .release-notice {
     margin-top: 20px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.03);
     border-radius: 15px;
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
+    border: 1px solid var(--border-color);
 }
 
 .release-badge {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ffffff;
-    /* White for premium feel */
+    color: var(--text-color);
     display: block;
     margin-bottom: 8px;
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
 .release-sub {
     font-size: 1rem;
     color: var(--text-secondary);
     margin: 0 !important;
-    /* Override hero p margin */
 }
 
 /* Features */
@@ -141,6 +142,7 @@ header {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
+    color: var(--text-color);
 }
 
 .feature-grid {
@@ -154,12 +156,12 @@ header {
     border: 1px solid var(--border-color);
     padding: 40px;
     border-radius: 20px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .feature-icon {
@@ -167,13 +169,14 @@ header {
     margin-bottom: 20px;
     display: inline-block;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.05);
     border-radius: 15px;
 }
 
 .feature-card h3 {
     margin-bottom: 15px;
     font-size: 1.5rem;
+    color: var(--text-color);
 }
 
 .feature-card p {
@@ -192,13 +195,14 @@ footer {
 /* Gallery Section */
 .gallery {
     padding: 100px 0;
-    background: linear-gradient(to bottom, var(--background-color), #0a0a0a);
+    background: linear-gradient(to bottom, var(--background-color), #eaeae8);
 }
 
 .gallery h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
+    color: var(--text-color);
 }
 
 .gallery-grid {
@@ -211,11 +215,10 @@ footer {
 
 .screenshot-container {
     width: 280px;
-    /* Adjust based on aspect ratio */
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border: 8px solid #2a2d40;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 8px solid #e0e0de;
     transition: transform 0.3s;
 }
 
